@@ -259,7 +259,7 @@ def synchronization_loop(args):
                                                 args.sync_vehicle_color, args.sync_vehicle_lights)
 
 
-    file_path = '/home/akua/Downloads/withoutmitigation/dataset_init.xlsx'
+    file_path = './Dataset/withoutmitigation/dataset_init.xlsx'
     data = pd.read_excel(file_path)
     init_queue = data.values
 
