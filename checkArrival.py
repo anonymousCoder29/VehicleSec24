@@ -3,7 +3,7 @@ import math
 import numpy as np
 
 # import tmin
-from OCT1_2 import OCT1
+from OCT1 import OCT1
 from search_i_p import search_i_p
 from findMP import find_MPs
 
