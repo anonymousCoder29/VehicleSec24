@@ -32,3 +32,9 @@ Then, the result with the mitigation is shown in the video below. As can be seen
 
 https://github.com/anonymousCoder29/VehicleSec24/assets/155138234/a3f2a924-2a30-4d25-83ed-aa7cad7150ff
 
+In order to run the scenarios we need three terminals. In the first terminal run the following:
+
+```
+.path_to_carla/CarlaUE4.sh
+
+```
