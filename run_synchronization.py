@@ -52,7 +52,7 @@ except IndexError:
 # ==================================================================================================
 # -- find traci module -----------------------------------------------------------------------------
 # ==================================================================================================
-
+mitigation = True
 if 'SUMO_HOME' in os.environ:
     sys.path.append(os.path.join(os.environ['SUMO_HOME'], 'tools'))
 else:
@@ -283,7 +283,6 @@ def synchronization_loop(args):
     car, metric, CAV_e = init.init(total + total_spooefed, max_range)
 
     trust = True
-    mitigation = False
     update_class_k_function = True
 
     try:
@@ -304,8 +303,7 @@ def synchronization_loop(args):
                 car['order'] = np.append(car['order'], length)
                 car = update_table(car)
                 CAV_e['arrivalexit'][length, 0] = dt * simulation_step
-
-
+            print(car['order'])
             for vehicle in car['order']:
                 vehicle = vehicle - 1
                 ego = car['que'][vehicle]
@@ -565,7 +563,14 @@ if __name__ == '__main__':
                            help="select traffic light manager (default: none)",
                            default='none')
     argparser.add_argument('--debug', action='store_true', help='enable debug messages')
+    argparser.add_argument('--mitigation',
+                           type=str,
+                           help="select wethear to simulate attack resulting in acceident or vice versa.",
+                           default='False')
+
     arguments = argparser.parse_args()
+    if arguments.mitigation == 'False':
+        mitigation = False
 
     if arguments.sync_vehicle_all is True:
         arguments.sync_vehicle_lights = True
