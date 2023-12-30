@@ -4,7 +4,6 @@ import numpy as np
 
 # import tmin
 from OCT1_2 import OCT1
-from get_L_1 import get_L_1
 from search_i_p import search_i_p
 from findMP import find_MPs
 
