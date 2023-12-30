@@ -30,7 +30,7 @@ The result for the attack scenario using our proposed framework is illustrated b
 
 https://github.com/anonymousCoder29/VehicleSec24/assets/155138234/11b9f8fd-eecc-4899-8699-68191bbcf24f
 
-We will need three terminals to run the scenarios. In the first terminal run the following:
+We will need two terminals to run the scenarios. In the first terminal run the following:
 ```
 ./CarlaUE4.sh
 ```
@@ -38,7 +38,7 @@ Then in the second terminal, run the following:
 ```
 python3 ./path_to_carla/config.py --map Town05
 ```
-Finally, in the third terminal run the following two commands to run the simulation that results in accident:
+Finally, in the second terminal run the following two commands to run the simulation that results in accident:
 ```
 python3 xmlconverter.py --dataset ./Dataset/Accident_dataset/dataset_init.xlsx
 python3 run_synchronization_accident.py --accident 'True' examples/Town05.sumocfg
@@ -60,7 +60,7 @@ Then, the result with the mitigation is shown in the video below. As can be seen
 
 https://github.com/anonymousCoder29/VehicleSec24/assets/155138234/a3f2a924-2a30-4d25-83ed-aa7cad7150ff
 
-In order to run the scenarios we need three terminals. Open a terminal and type the following:
+In order to run the scenarios we need two terminals. Open a terminal and type the following:
 ```
 ./CarlaUE4.sh
 ```
@@ -68,12 +68,12 @@ Then in the second terminal, run the following:
 ```
 python3 ./path_to_carla/config.py --map Town05
 ```
-Finally, in the third terminal run the following two commands to run the scenario without our proposed mitigation scheme:
+Finally, run the following two commands to run the scenario without our proposed mitigation scheme:
 ```
 python3 xmlconverter.py --dataset ./Dataset/Mitigation_dataset/dataset_init.xlsx
 python3 run_synchronization.py --mitigation 'False' examples/Town05.sumocfg
 ```
-To run the scenario with our proposed mitigation scheme run the following commands in the third terminal:
+To run the scenario with our proposed mitigation scheme run the following commands in the second terminal:
 
 ```
 python3 xmlconverter.py --dataset ./Dataset/Mitigation_dataset/dataset_init.xlsx
