@@ -9,4 +9,8 @@ https://carla.readthedocs.io/en/latest/start_quickstart/
 
 Please setup the conda environment by running the following command.
 
+'''
+conda env create -n envName -f SumoCarla.yml
+'''
+
 Than
