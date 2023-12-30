@@ -68,13 +68,17 @@ Then in the second terminal, run the following:
 ```
 python3 ./path_to_carla/config.py --map Town05
 ```
-Finally, in the thrid terminal run the following two commands:
+Finally, in the third terminal run the following two commands to run the scenario without our proposed mitigation scheme:
 ```
 python3 xmlconverter.py --dataset ./Dataset/Mitigation_dataset/dataset_init.xlsx
 python3 run_synchronization.py --mitigation 'False' examples/Town05.sumocfg
 ```
+To run the scenario with our proposed mitigation scheme run the following commands in the third terminal:
 
-
+```
+python3 xmlconverter.py --dataset ./Dataset/Mitigation_dataset/dataset_init.xlsx
+python3 run_synchronization.py --mitigation 'True' examples/Town05.sumocfg
+```
 
 
 
