@@ -74,4 +74,3 @@ def search_for_conflictCAVS_trustversion(que, table, egocar, multiple_constraint
 
     return ip, index, position
 
-
