@@ -16,4 +16,4 @@ Please setup the conda environment by running the following command.
 conda env create -n envName -f SumoCarla.yml
 ```
 
-Then download/clone the repository and code the files in the sumo folder where it is installed.
+Then download/clone the repository and copy the files in the sumo folder where it is installed.
