@@ -35,8 +35,10 @@ https://github.com/anonymousCoder29/VehicleSec24/assets/155138234/a3f2a924-2a30-
 In order to run the scenarios we need three terminals. In the first terminal run the following:
 
 ```
-python3 ./path_to_carla/config.py --map Town05
-
+./CarlaUE4.sh
 ```
-Then in the second terminal, run the following:
 
+Then in the second terminal, run the following:
+```
+python3 ./path_to_carla/config.py --map Town05
+```
