@@ -73,6 +73,13 @@ Finally, run the following two commands to run the scenario without our proposed
 python3 xmlconverter.py --dataset ./Dataset/Mitigation_dataset/dataset_init.xlsx
 python3 run_synchronization.py --mitigation 'False' examples/Town05.sumocfg
 ```
+or 
+
+To run with Sumo GUI use the following command:
+```
+python3 run_synchronization.py --mitigation 'False' examples/Town05.sumocfg sumo-gui
+```
+
 To run the scenario with our proposed mitigation scheme run the following commands in the second terminal:
 
 ```
