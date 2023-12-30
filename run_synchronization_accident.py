@@ -72,6 +72,7 @@ from sumo_integration.sumo_simulation import SumoSimulation  # pylint: disable=w
 # -- synchronization_loop --------------------------------------------------------------------------
 # ==================================================================================================
 
+runMode = 'False'
 
 class SimulationSynchronization(object):
     """
@@ -415,8 +416,10 @@ def synchronization_loop(args):
 
                     ego['prestate'] = ego['state']
 
-                    ego['state'], ego['infeasibility'] = OCBF_time(simulation_step, ego, car['que'])
-                    #ego['state'], ego['infeasibility'] = OCBF_event(simulation_step, ego, car['que'], flags)
+                    if runMode == 'True': 
+                        ego['state'], ego['infeasibility'] = OCBF_time(simulation_step, ego, car['que'])
+                    else: 
+                        ego['state'], ego['infeasibility'] = OCBF_event(simulation_step, ego, car['que'], flags)
 
             for vehicle in car['order']:
                 if trust:
@@ -573,9 +576,14 @@ if __name__ == '__main__':
                            type=str,
                            choices=['none', 'sumo', 'carla'],
                            help="select traffic light manager (default: none)",
-                           default='none')
+                           default='none')                       
+    argparser.add_argument('--accident',
+                           type=str,
+                           help="select wethear to simulate attack resulting in acceident or vice versa.",
+                           default='False')
     argparser.add_argument('--debug', action='store_true', help='enable debug messages')
     arguments = argparser.parse_args()
+    runMode = arguments.accident
 
     if arguments.sync_vehicle_all is True:
         arguments.sync_vehicle_lights = True
