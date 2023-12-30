@@ -22,7 +22,6 @@ def update_table(car):
     order = car["order"]
     car['table'] = []
     for j in range(size):
-        # print(order[j],int(order[j]),car['que'])
         temp = np.zeros((15),dtype=int)
         # 1st: index, 2-29: CP 1-28, 30: current lane
         # 31: order No, that is the index of the vehicle in the queue
