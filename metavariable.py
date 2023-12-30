@@ -1,7 +1,7 @@
 max_range = 450
-s1 = 0.5
+s1 = 0.4
 s2 = 0.5
-s3 = 0.5
+s3 = 0.4
 dt = 0.1
 noise1 = 0
 noise2 = 0
