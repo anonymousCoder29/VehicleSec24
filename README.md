@@ -83,7 +83,7 @@ or,
 
 To run with Sumo GUI use the following command:
 ```
-python3 run_synchronization.py --mitigation 'False' examples/Town05.sumocfg --sumo-gui
+python3 run_synchronization.py --mitigation 'True' examples/Town05.sumocfg --sumo-gui
 ```
 
 
