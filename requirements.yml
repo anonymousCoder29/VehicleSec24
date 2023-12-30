@@ -111,4 +111,3 @@ dependencies:
       - werkzeug==2.2.3
       - widgetsnbextension==4.0.9
       - zipp==3.15.0
-prefix: /home/rastic-admin/anaconda3/envs/CarlaEnv
