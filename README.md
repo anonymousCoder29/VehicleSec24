@@ -49,6 +49,12 @@ In order to run our porposed scheme that elimitates the accident run the followi
 python3 xmlconverter.py --dataset ./Dataset/Accident_dataset/dataset_init.xlsx
 python3 run_synchronization_accident.py --accident 'False' examples/Town05.sumocfg
 ```
+or,
+
+To run with Sumo GUI use the following command:
+```
+python3 run_synchronization.py --mitigation 'True' examples/Town05.sumocfg --sumo-gui
+```
 
 # Attack Mitigation Results
 
