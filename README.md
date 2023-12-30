@@ -35,6 +35,6 @@ https://github.com/anonymousCoder29/VehicleSec24/assets/155138234/a3f2a924-2a30-
 In order to run the scenarios we need three terminals. In the first terminal run the following:
 
 ```
-.path_to_carla/CarlaUE4.sh
+./path_to_carla/CarlaUE4.sh
 
 ```
