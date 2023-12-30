@@ -15,8 +15,7 @@ random.seed(5)
 #from scipy.optimize import odeint
 from main_OCBF import second_order_model
 
-from metavariable import s1, s2, s3, dt, noise1, noise2, const1, const2, const3, const4
-
+from metavariable_accident import s1, s2, s3, dt, noise1, noise2, const1, const2, const3, const4, max_range,L_end,trust_threshold
 def update_table(car):
     size = len(car["order"])
     order = car["order"]
