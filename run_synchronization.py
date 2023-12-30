@@ -52,7 +52,7 @@ except IndexError:
 # ==================================================================================================
 # -- find traci module -----------------------------------------------------------------------------
 # ==================================================================================================
-mitigation = True
+    mitigation = True
 if 'SUMO_HOME' in os.environ:
     sys.path.append(os.path.join(os.environ['SUMO_HOME'], 'tools'))
 else:
@@ -303,7 +303,8 @@ def synchronization_loop(args):
                 car['order'] = np.append(car['order'], length)
                 car = update_table(car)
                 CAV_e['arrivalexit'][length, 0] = dt * simulation_step
-            print(car['order'])
+
+
             for vehicle in car['order']:
                 vehicle = vehicle - 1
                 ego = car['que'][vehicle]
@@ -571,6 +572,7 @@ if __name__ == '__main__':
     arguments = argparser.parse_args()
     if arguments.mitigation == 'False':
         mitigation = False
+    arguments = argparser.parse_args()
 
     if arguments.sync_vehicle_all is True:
         arguments.sync_vehicle_lights = True
@@ -582,34 +584,3 @@ if __name__ == '__main__':
         logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
 
     synchronization_loop(arguments)
-
-
-    # CAV_e = synchronization_loop(arguments)
-    # pointer = 1
-    # total = 1
-    # dt = 0.1
-    # fig, axs = plt.subplots(2, figsize=(8, 10))
-    # while pointer <= total:
-    #     indicies = np.where(~np.isnan(CAV_e['acc'][:, pointer]))[0]
-    #     time_samples = dt * indicies
-    #
-    #     acceleration = CAV_e['acc'][indicies, pointer]
-    #     velocity = CAV_e['vel'][indicies, pointer]
-    #     # position = CAV_e['pos'][non_nan_indices, pointer]
-    #
-    #
-    #
-    #
-    #     axs[0].plot(time_samples, acceleration, linestyle='-')
-    #     # axs[0].set_title('Non-NaN Values vs Indices')
-    #     axs[0].set_xlabel('Time')
-    #     axs[0].set_ylabel('Acceleration')
-    #
-    #     axs[1].plot(time_samples, velocity, linestyle='-')
-    #     axs[1].set_xlabel('Time')
-    #     axs[1].set_ylabel('Velocity')
-    #     pointer += 1
-    #
-    # plt.tight_layout()
-    # plt.show()
-
