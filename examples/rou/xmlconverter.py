@@ -21,7 +21,7 @@ def create_vehicle_xml(vehicle_id, vehicle_type, departure_time, departure_lane,
 #departure_lane = "best"
 #route_edges = "0.0.00 -26.0.00"
 
-file_path = '/home/akua/Downloads/withoutmitigation/dataset_init.xlsx'
+file_path = './Dataset/withoutmitigation/dataset_init.xlsx'
 data = pd.read_excel(file_path)
 data_array = data.values
 
