@@ -259,7 +259,7 @@ def synchronization_loop(args):
                                                 args.sync_vehicle_color, args.sync_vehicle_lights)
 
 
-    file_path = './Dataset/withoutmitigation/dataset_init.xlsx'
+    file_path = './Dataset/Accident_dataset/dataset_init.xlsx'
     data = pd.read_excel(file_path)
     init_queue = data.values
 
@@ -356,7 +356,7 @@ def synchronization_loop(args):
                             CAV_e['rear_end_CBF'][simulation_step, id] = vip - vi -phiRearEnd*ui + k_rear * (
                                     xip - xi - phiRearEnd * vi - deltaSafetyDistance)
                             CAV_e['rear_end'][simulation_step, id] = ego["rearendconstraint"]
-                            print(xip - xi,CAV_e['rear_end_CBF'][simulation_step, id])
+                            #print(xip - xi,CAV_e['rear_end_CBF'][simulation_step, id])
 
 
                     for k in range(len(index)):
@@ -628,5 +628,4 @@ if __name__ == '__main__':
     #
     # plt.tight_layout()
     # plt.show()
-
 
