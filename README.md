@@ -71,7 +71,6 @@ python3 ./path_to_carla/config.py --map Town05
 Finally, in the thrid terminal run the following two commands:
 ```
 python3 xmlconverter.py --dataset ./Dataset/Mitigation_dataset/dataset_init.xlsx
-
 python3 run_synchronization.py --mitigation 'False' examples/Town05.sumocfg
 ```
 
