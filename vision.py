@@ -9,7 +9,7 @@ def vision(que, ego):
     ego_heading = np.arctan2(ego['realpose'][1] - ego['prerealpose'][1], ego['realpose'][0] - ego['prerealpose'][0])
 
     for i, other_car in enumerate(que):
-        if que[i]['id'][1] == ego['id'][1]:
+        if que[i]['id'][1] == ego['id'][1] or que[i]['agent'] != 0:
             continue
         else:
             relative_heading = ego_heading - np.arctan2(-ego['prerealpose'][1] - 0.01 + other_car['realpose'][1],
