@@ -36,7 +36,7 @@ We will need two terminals to run the scenarios. In the first terminal run the f
 ```
 Then in the second terminal, run the following:
 ```
-python3 ./path_to_carla/config.py --map Town05
+python3 ./path_to_carla/PythonAPI/util/config.py --map Town05
 ```
 Finally, in the second terminal run the following two commands to run the simulation that results in an accident:
 ```
