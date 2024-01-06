@@ -72,7 +72,7 @@ To run the scenarios we need two terminals. Open a terminal and type the followi
 ```
 Then in the second terminal, run the following:
 ```
-python3 ./path_to_carla/config.py --map Town05
+python3 ./path_to_carla/PythonAPI/utilconfig.py --map Town05
 ```
 Finally, run the following two commands to run the scenario without our proposed mitigation scheme:
 ```
